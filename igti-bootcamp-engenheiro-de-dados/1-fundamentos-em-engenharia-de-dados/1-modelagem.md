@@ -40,6 +40,7 @@ O modelo conceitual mais conhecido é o MER (Modelo Entidade Relacionamento), cr
 Fonte: https://pt.stackoverflow.com/questions/391730/cardinalidade-m%C3%ADnima-e-m%C3%A1xima-modelo-relacional
 
 **Notação DER - Peter Chen**
+
 ![image](https://sites.google.com/site/fkbancodedados1/_/rsrc/1466881366775/modelodados/der/bd13.png)
 
 Fonte: https://sites.google.com/site/fkbancodedados1/modelodados/der
