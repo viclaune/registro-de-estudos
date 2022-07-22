@@ -2,7 +2,7 @@
 
 Modelos são abstrações dos elementos do mundo real. Abstração de dados é a técnica de focar nos elementos principais dos dados, em seu significado, características e como se relacionam entre si, suas funções no negócio... A modelagem de dados é extamente a representação dos dados abstraídos em diferentes níveis, sendo o Modelo conceitual o de maior abstração e o Modelo Físico de menor, por já se preocupar mais no formato do dado em sua camada final.
 
-### 1.1 Modelagem Conceitual
+## 1.1 Modelagem Conceitual
 ![image](https://i.stack.imgur.com/Vfu9R.png)
 
 Fonte: https://pt.stackoverflow.com/questions/126104/modelo-conceitual
@@ -45,7 +45,7 @@ Fonte: https://pt.stackoverflow.com/questions/391730/cardinalidade-m%C3%ADnima-e
 
 Fonte: https://sites.google.com/site/fkbancodedados1/modelodados/der
 
-### 1.2 Modelo Lógico
+## 1.2 Modelo Lógico
 
 ![image](https://www.devmedia.com.br/imagens/sqlmagazine/abr2006/30-05pic02.JPG)
 
@@ -61,9 +61,9 @@ No modelo relacional essas tabelas se relacionam através das **chaves**. As cha
   - Chave Única (**U**nique **K**ey): Recupera uma única ocorrência do conjunto de dados e pode receber valores nulos. Pode ser usada para definir um relacionamento.
   - Chave Estrangeira (**F**oreign **K**ey): Atributo(s) chave de uma relação, cujos valores estão presente em outra relacionada a ela. Implementa o relacionamento entre tabelas.
 
-### 1.3 Bancos Relacionais e SGBDs
+## 1.3 Bancos Relacionais e SGBDs
 
-### 1.4 Modelo Físico
+## 1.4 Modelo Físico
 
 É baseado no paradigma escolhido no modelo lógico, definimos a tecnologia que amarzenará os dados, ou seja, o SGBD (Sistema Gerenciador de Banco de Dados). Cada SGBD disponível no mercado possui suas características próprias que o modelo físico deve considerar, mas, independente do SGBD, os padrões básicos serão consistentes com o paradigma. Logo, qualquer banco relacional do mercado implementará os conceitos relacionais (entidade, atributo, relacionamento, chaves...)
 
