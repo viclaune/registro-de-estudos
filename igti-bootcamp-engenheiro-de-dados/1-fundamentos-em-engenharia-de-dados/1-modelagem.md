@@ -2,8 +2,9 @@
 
 Modelos são abstrações dos elementos do mundo real. Abstração de dados é a técnica de focar nos elementos principais dos dados, em seu significado, características e como se relacionam entre si, suas funções no negócio... A modelagem de dados é extamente a representação dos dados abstraídos em diferentes níveis, sendo o Modelo conceitual o de maior abstração e o Modelo Físico de menor, por já se preocupar mais no formato do dado em sua camada final.
 
-### 2.1 Modelagem Conceitual
+### 1.1 Modelagem Conceitual
 ![image](https://i.stack.imgur.com/Vfu9R.png)
+
 Fonte: https://pt.stackoverflow.com/questions/126104/modelo-conceitual
 
 É o modelo que está mais próximo da realidade dos usuários. Sendo construído a partir dos resultados extraídos na fase de levantamento de requisitos (quando os projetistas de db entrevistam os usuários para entenderem como realizam suas atividades, como se relacionam com os processos e sistemas vigentes e documentam os resultados). Nesta fase não há uso de tecnologias e ferramentas, apenas o entendimento dos agentes que executam as ações, suas características e como se relacionam.
@@ -23,15 +24,28 @@ O modelo conceitual mais conhecido é o MER (Modelo Entidade Relacionamento), cr
   - Monovalorado: Possui apenas um valor para uma entidade. (Idade, CPF, altura)
   - Multivalorado: Pode ter mais de uma ocorrência para uma mesma entidade. (Endereço pode ser comercial e residencial; Telefone; Formação acadêmica;)
   - Armazenado: Atributos com valores fixos persistidos em banco.
-  - Derivado: 
+  - Derivado: Atributos cujos valores devem ser obtidos após algum processamento utilizando informações obtidas do próprio banco de dados (idade = Data_Atual - Data_Nascimento)
   - Atributo chave: É aquele que representa unicamente uma ocorrência da entidade, que garente unicidade (cod_cliente, CPF, CRM).
 
 **Relacionamento:** É uma associação entre uma ou mais entidades.
-  - Binária/Ternário:
-  - Auto relacionamento, recursivo ou unário:
-  - <u>Cardinalidade</u>:
-      - a
-      - a
-      - a
+  - Binária/Ternário: Definido pela quantidade de entidades envolvidas no relacionamento. Binário são duas entidades, ternário três entidades e assim por diante. 
+  - Auto relacionamento, recursivo ou unário: Auto-explicável; É preciso entender que entidades possuem papéis, ou uma "função"no relacionamento. Ex.: Funcionário é gerenciado por um outro Funcionário.
+  - <u>Cardinalidade</u>: Os relacionamentos também podem ser definidos pela razão de cardinalidade. A razão de cardinalidade especifica a quantidade de instâncias/ocorrências de relacionamentos em que uma entidade pode participar (1:1, 1:N, N:N).
+      - **1:1**: **Um** empregado gerencia **um** departamento e um departamento pode ser gerenciado por apenas **um** funcionário.
+      - **1:N ou N:1**: **Um** empregado trabalha em **um** departamento, e **um** departamento pode ter **vários** (N) empregados.
+      - **N:N**: Empregado pode trabalhar em **vários** (N) projetos e um projeto pode possuir **vários** (N) empregados. Para evitar redundância de dados, cria-se uma **entidade associativa**.
+  - <u>Obrigatoriedade</u>: Além da cardinalidade também especificamos a obrigatoriedade, ou seja, se uma ocorrência de uma entidade é obrigatória ou não.
+ ![image](https://i.stack.imgur.com/vqEc6.png)
+ Fonte: https://pt.stackoverflow.com/questions/391730/cardinalidade-m%C3%ADnima-e-m%C3%A1xima-modelo-relacional
 
-### 2.2 Modelo Lógico
+**Notação DER - Peter Chen**
+![image](https://sites.google.com/site/fkbancodedados1/_/rsrc/1466881366775/modelodados/der/bd13.png)
+Fonte: https://sites.google.com/site/fkbancodedados1/modelodados/der
+
+### 1.2 Modelo Lógico
+
+### 1.3 Bancos Relacionais e SGBDs
+
+### 1.4 Modelo Físico
+
+
