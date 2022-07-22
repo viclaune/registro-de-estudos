@@ -35,6 +35,7 @@ O modelo conceitual mais conhecido é o MER (Modelo Entidade Relacionamento), cr
       - **1:N ou N:1**: **Um** empregado trabalha em **um** departamento, e **um** departamento pode ter **vários** (N) empregados.
       - **N:N**: Empregado pode trabalhar em **vários** (N) projetos e um projeto pode possuir **vários** (N) empregados. Para evitar redundância de dados, cria-se uma **entidade associativa**.
   - <u>Obrigatoriedade</u>: Além da cardinalidade também especificamos a obrigatoriedade, ou seja, se uma ocorrência de uma entidade é obrigatória ou não.
+  
  ![image](https://i.stack.imgur.com/vqEc6.png)
 
 Fonte: https://pt.stackoverflow.com/questions/391730/cardinalidade-m%C3%ADnima-e-m%C3%A1xima-modelo-relacional
