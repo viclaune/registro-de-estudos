@@ -36,16 +36,39 @@ O modelo conceitual mais conhecido é o MER (Modelo Entidade Relacionamento), cr
       - **N:N**: Empregado pode trabalhar em **vários** (N) projetos e um projeto pode possuir **vários** (N) empregados. Para evitar redundância de dados, cria-se uma **entidade associativa**.
   - <u>Obrigatoriedade</u>: Além da cardinalidade também especificamos a obrigatoriedade, ou seja, se uma ocorrência de uma entidade é obrigatória ou não.
  ![image](https://i.stack.imgur.com/vqEc6.png)
- Fonte: https://pt.stackoverflow.com/questions/391730/cardinalidade-m%C3%ADnima-e-m%C3%A1xima-modelo-relacional
+
+Fonte: https://pt.stackoverflow.com/questions/391730/cardinalidade-m%C3%ADnima-e-m%C3%A1xima-modelo-relacional
 
 **Notação DER - Peter Chen**
 ![image](https://sites.google.com/site/fkbancodedados1/_/rsrc/1466881366775/modelodados/der/bd13.png)
+
 Fonte: https://sites.google.com/site/fkbancodedados1/modelodados/der
 
 ### 1.2 Modelo Lógico
 
+![image](https://www.devmedia.com.br/imagens/sqlmagazine/abr2006/30-05pic02.JPG)
+
+Fonte: https://www.devmedia.com.br/associando-tabelas-no-sql-server/1964
+
+O modelo lógico é um aprofundamento do modelo conceitual. Neste modelo, ainda não se escolheu a tecnologia, mas sim o paradigma: relacional, orientado a objeto, hierárquico, de rede... o paradigma é o que apresenta como os dados se organizarão e irão interagir entre si. Iremos trabalhar em cima do paradigma relacional, com base no MER, avançamos mais um nível, agora descrevendo os dados com mais detalhes, preparando para o próximo nível, o modelo físico.
+
+O Modelo Relacional representa o banco de dados como uma coleção de relações, que as entidades do modelo conceitual representam as tabelas no modelo lógico/físico, e as tabelas possuem atributos, ou colunas, que lhe conferem características, e que cada ocorrência dessa tabela são as linhas, tuplas, ou registros. E cada registro possui um domínio (numérico, alfanumérico, data, etc.)
+
+No modelo relacional essas tabelas se relacionam através das **chaves**. As chaves são os atributos identificadores, aqueles que identificam unicamente uma linha (chave primária e chave única), ou atributos que promovem o relacionamento entre tabelas (chave estrangeira).
+
+  - Chave Primária (**P**rimary **K**ey): Recupera uma única ocorrência do conjunto de dados; Unicidade de valores na coluna que compõe a chave. Único e não nulo. 
+  - Chave Única (**U**nique **K**ey): Recupera uma única ocorrência do conjunto de dados e pode receber valores nulos. Pode ser usada para definir um relacionamento.
+  - Chave Estrangeira (**F**oreign **K**ey): Atributo(s) chave de uma relação, cujos valores estão presente em outra relacionada a ela. Implementa o relacionamento entre tabelas.
+
 ### 1.3 Bancos Relacionais e SGBDs
 
 ### 1.4 Modelo Físico
+
+É baseado no paradigma escolhido no modelo lógico, definimos a tecnologia que amarzenará os dados, ou seja, o SGBD (Sistema Gerenciador de Banco de Dados). Cada SGBD disponível no mercado possui suas características próprias que o modelo físico deve considerar, mas, independente do SGBD, os padrões básicos serão consistentes com o paradigma. Logo, qualquer banco relacional do mercado implementará os conceitos relacionais (entidade, atributo, relacionamento, chaves...)
+
+Esta é a fase de escolher o SGBD e criar o modelo de armazenamento utilizando alguma linguagem e respeitando as restrições impostas pela tecnologia escolhida.
+
+Para os modelos relacionais, alguns dos SGBDs que implementam tal arquitetura são: Microsoft SQL Server, Oracle, MySQL, PostgreSQL.
+
 
 
